@@ -122,7 +122,7 @@ new Vue({
       if (this.portfolio.length) {
         this.portfolio.forEach(item => {
           if (item && (item.price_usd || item.price_eur)) {
-            price = this.unit === 'usd' ? item.price_usd : item.price_eur
+            let price = this.unit === 'usd' ? item.price_usd : item.price_eur
             if (deleted && item.deactive) {
               price = 0;
             }
